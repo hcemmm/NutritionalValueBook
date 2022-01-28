@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="selectFood"
+            type="com.example.foodbookedu.model.Food" />
+
+    </data>
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".view.FoodDetailsFragment">
+
+
+        <ImageView
+            android:id="@+id/foodDetailsImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:downloadImage="@{selectFood.image}"
+            android:minHeight="200dp"
+            android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:layout_below="@id/foodDetailsImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="40dp">
+
+
+        <TextView
+            android:id="@+id/foodDetailsName"
+            android:hint="Food Name"
+            android:textSize="50sp"
+            android:text="@{selectFood.name}"
+            android:textStyle="bold|italic"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/foodDetailsCalorie"
+            android:hint="Food Calorie"
+            android:textSize="25sp"
+            android:text="@{selectFood.calorie}"
+            android:layout_margin="10dp"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/foodDetailsCarbs"
+            android:hint="Food Carbs"
+            android:text="@{selectFood.carbohydrate}"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/foodDetailsProtein"
+            android:hint="Food Protein"
+            android:text="@{selectFood.protein}"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/foodDetailsFoodFatContent"
+            android:hint="Food Fat Content"
+            android:text="@{selectFood.fatcontent}"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</RelativeLayout>
+</layout>
